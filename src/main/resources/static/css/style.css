@@ -1,0 +1,15 @@
+@charset "ISO-8859-1";
+h4{
+	color:#c0c0c0;
+	tex-align:center;
+}
+.span
+{
+	color:red;
+}
+body{
+	background-color: #ff8080;
+}
+.form{
+	text-align:center;
+}
