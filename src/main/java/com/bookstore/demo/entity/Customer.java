@@ -12,9 +12,16 @@ public class Customer {
 	@Id
 	  @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	@Column(nullable = false, length = 20)
 	private String firstname;
+	@Column(nullable = false, length = 20)
 	private String lastname;
-	private String city,email,dob,password;
+	private String city;
+	private String email;
+	private String dob;
+	@Column(nullable = false, length = 64)
+	private String password;
+	@Column(nullable = false, unique = true, length = 45)
 	private String username;
 	
 	public Customer() {

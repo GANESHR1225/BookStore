@@ -7,8 +7,10 @@
 <title>Customer Registration</title>
 </head>
 <body>
-<div class="Coontainer">
-<h2> New Customer Registration</h2>
+ <div class="container text-center">
+        <div>
+            <h1>User Registration - Sign Up</h1>
+        </div>
 <hr>
 <form action="addcustomer" method="post">
 <div class="form-group">

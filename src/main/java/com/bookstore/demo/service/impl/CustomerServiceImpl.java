@@ -18,9 +18,17 @@ public class CustomerServiceImpl implements CustomerService{
 	private customerRepo custRepo;
 	@Autowired
 	private bookRepo bookrepo;
+	@Autowired
+	private Customer customer;
 
 	@Override
 	public Customer saveBook(Customer customer) {
+		/* BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder(); */
+		/*
+		 * String encodedPassword =
+		 * BCryptPasswordEncoder.encode(customer.getpassword());
+		 * customer.setpassword(encodedPassword);
+		 */
 		return custRepo.save(customer);
 	}
 

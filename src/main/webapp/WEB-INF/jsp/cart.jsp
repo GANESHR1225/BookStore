@@ -46,7 +46,7 @@
 
 <!-- Table View of Books -->
 	<div class="container p-5">
-		<h1>Book List</h1>
+
 		<table class="table table-striped table-bordered table-hover"
 			border="1">
 			<thead class="table-dark">
