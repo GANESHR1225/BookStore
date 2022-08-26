@@ -54,7 +54,7 @@
 		</form>
 	</div>
 	<div class="form">
-		<form action="/customerlogin" method="post">
+		<form action="/customer/login" method="post">
 			<div>
 				<button type="submit">Customer</button>
 			</div>

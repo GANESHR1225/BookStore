@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,8 +13,8 @@
             <h1>User Registration - Sign Up</h1>
         </div>
 <hr>
-<form action="addcustomer" method="post">
-<div class="form-group">
+<form action="/customer/addcustomer" method="post">
+<div class="form-group ">
 <label for ="firstname" class="label"> Name <span class="span"></span></label><br>
 <input type="text" name="firstname" required="required">
 </div><br>
@@ -25,10 +26,10 @@
 <label for ="dob" class="label"> Date Of Birth <span class="span">*</span></label><br>
 <input type="date" name="dob" required="required">
 </div><br>
-<div class="form-group">
+<div class="form-group  ${status.error ? 'has-error' : ''}">
 <label for ="username" class="label"> USERNAME <span class="span">*</span></label><br>
 <input type="text" name="username" required="required">
-<div class="form-group">
+<div class="form-group  ${status.error ? 'has-error' : ''}">
 <label for ="password" class="label"> Password <span class="span">*</span></label><br>
 <input type="password" name="password" required="required">
 </div><br>

@@ -1,13 +1,18 @@
 package com.bookstore.demo.entity;
 
+import java.util.Collection;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
 @Entity
-public class Customer {
+public class Customer{
 	
 	@Id
 	  @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,10 +26,11 @@ public class Customer {
 	private String dob;
 	@Column(nullable = false, length = 64)
 	private String password;
-	@Column(nullable = false, unique = true, length = 45)
+	@Column(nullable = false, unique = true, length = 32)
 	private String username;
 	
-	public Customer() {
+	public Customer()
+	{
 		
 	}
 	public Customer(int id, String firstname, String lastname, String city, String email, String dob, String password,
@@ -87,6 +93,27 @@ public class Customer {
 	public void setpassword(String password) {
 		this.password = password;
 	}
-	
+	/*
+	 * @Override public Collection<? extends GrantedAuthority> getAuthorities() { //
+	 * TODO Auto-generated method stub return null; }
+	 * 
+	 * @Override public String getPassword() { // TODO Auto-generated method stub
+	 * return password; }
+	 * 
+	 * @Override public String getUsername() { // TODO Auto-generated method stub
+	 * return username; }
+	 * 
+	 * @Override public boolean isAccountNonExpired() { // TODO Auto-generated
+	 * method stub return true; }
+	 * 
+	 * @Override public boolean isAccountNonLocked() { // TODO Auto-generated method
+	 * stub return true; }
+	 * 
+	 * @Override public boolean isCredentialsNonExpired() { // TODO Auto-generated
+	 * method stub return true; }
+	 * 
+	 * @Override public boolean isEnabled() { // TODO Auto-generated method stub
+	 * return true; }
+	 */	
 
 }

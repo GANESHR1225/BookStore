@@ -28,7 +28,7 @@
 				<li class="nav-item active"><a class="nav-link" href="">Home
 						<span class="sr-only">(current)</span>
 				</a></li>
-				<li class="nav-item active"><a class="nav-link" href="/viewbookcust">BookList</a></li>
+				<li class="nav-item active"><a class="nav-link" href="/customer/viewbookcust">BookList</a></li>
 				<li class="nav-item active"><a class="nav-link" href="viewcart">Cart</a></li>
 			</ul>
 			<ul class="navbar-nav ml-auto">
