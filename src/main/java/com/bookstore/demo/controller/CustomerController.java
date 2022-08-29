@@ -9,6 +9,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.bookstore.demo.entity.Book;
 import com.bookstore.demo.entity.Customer;
@@ -24,19 +25,25 @@ public class CustomerController {
 	 @Autowired
 	  private CustomerValidator customervalidator;
 	
+		@RequestMapping(value= "/login" ,method = RequestMethod.GET)
+		public String onlogin(Model m)
+		{
+			return "login";
+		}
 
-	@RequestMapping("/customer/login")
-	public String login(Model model) {
+	@RequestMapping(value="/customer/login" ,method = RequestMethod.GET)
+	public String login(Model m) {
 		System.out.println(" customer controller in**********");
 		return "customerlogin";
 	}
 
-	@RequestMapping("/customer/home")
+	@RequestMapping(value="/cust/home" ,method = RequestMethod.GET)
 	public String home(Model m) {
+		System.out.println("inside /customer/home");
 		return "customerhome";
 	}
 
-	@RequestMapping("/customer/newCustomerRegistration")
+	@RequestMapping(value="/customer/newCustomerRegistration" ,method = RequestMethod.POST)
 	public String addNewCustomerForm(Model model) {
 		Customer customer = new Customer();
 		model.addAttribute("customer", customer);
@@ -48,6 +55,7 @@ public class CustomerController {
 		
 		customervalidator.validate(customer, bindingResult);
 		 if (bindingResult.hasErrors()) {
+			 System.out.println("The error on registraion ");
 	            return "newCustomerRegistration";
 	        }
 		 else {

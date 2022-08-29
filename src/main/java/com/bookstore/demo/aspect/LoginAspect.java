@@ -1,6 +1,7 @@
 package com.bookstore.demo.aspect;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -19,14 +20,14 @@ public class LoginAspect {
 
 	//private Logger logger = LoggerFactory.getLogger(this.getClass());
 	
-	@Around ("pointcut()")
-	public void beforelogin() {
+	@Before("pointcut()")
+	public void beforelogin(JoinPoint jp) {
 		System.out.println(" going to login into system**********");
-		/* logger.info(" Logged in", jp.getClass()); */
+		System.out.println(" Logged in"+ jp.getSignature()); 
 	}
 	
 	//Here we need to pass expression so that spring AOP can knows where to target customized methods
-	@Pointcut(value ="execution(* com.bookstore.demo.controller.*.*(..))")
+	@Pointcut(value ="execution(* com.bookstore.demo.controller.*.login(..))")
 	public void pointcut() {
 		
 	}

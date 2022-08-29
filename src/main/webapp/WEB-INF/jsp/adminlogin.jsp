@@ -13,10 +13,10 @@
 	<div class="form-inline">
 		<form class="form-inline" action="/Adminhome" method="post">
 			<div class="form-group">
-				<input type="text" class="form-control" id="userId"
-					required="required" placeholder="UserId"> <input
-					type="password" class="form-control" id="password"
-					required="required" placeholder="Password"> <input
+				<input type="text" class="form-control" id="username"
+					required="required" placeholder="username"> <input
+					type="password" class="form-control" id="pass"
+					required="required" placeholder="pass"> <input
 					type="checkbox"> Remember me
 				<button type="submit">Login</button>
 		</form>

@@ -47,14 +47,14 @@
 		<h2>Login As</h2>
 	<hr>
 	<div class="form">
-		<form action="/adminlogin" method="post">
+		<form action="/admin/login">
 			<div>
 				<button type="submit">Admin</button>
 			</div>
 		</form>
 	</div>
 	<div class="form">
-		<form action="/customer/login" method="post">
+		<form action="/customer/login" method="get">
 			<div>
 				<button type="submit">Customer</button>
 			</div>

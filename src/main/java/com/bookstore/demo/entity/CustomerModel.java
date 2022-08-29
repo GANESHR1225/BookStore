@@ -1,12 +1,10 @@
-package com.bookstore.demo.model;
+package com.bookstore.demo.entity;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
-import com.bookstore.demo.entity.Customer;
 
 public class CustomerModel implements UserDetails {
 	

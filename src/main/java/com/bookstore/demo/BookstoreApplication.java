@@ -32,7 +32,7 @@ public class BookstoreApplication implements CommandLineRunner{
 	  Book bk = new Book(123,2000, 1, "Python", "Pritam"); bookrepo.save(bk);
 	  
 	  Customer customer = new Customer(1, "vicky", "jhon", "Mumbai",
-	  "abc@demo.com", "25-12-1995", "Vicky", "12345"); 
+	  "abc@demo.com", "25-12-1995", "12345", "12345"); 
 	  custrepo.save(customer);
 	  
 	  

@@ -18,7 +18,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @Service
-public class CustomerServiceImpl implements CustomerService, UserDetailsService{
+public class CustomerServiceImpl implements CustomerService{
 	
 	@Autowired
 	private customerRepo custRepo;
@@ -46,16 +46,16 @@ public class CustomerServiceImpl implements CustomerService, UserDetailsService{
 		return bookrepo.findAll();
 	}
 
-	@Override
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		 Customer customer = custRepo.findByUsername(username);
-	        if(customer != null){
-	            return new CustomerDetails(customer);
-	        }else {
-	            throw new UsernameNotFoundException("Invalid email or password");
-	        }
-	    
-	}
+	/*
+	 * @Override public UserDetails loadUserByUsername(String username) throws
+	 * UsernameNotFoundException { Customer customer =
+	 * custRepo.findByUsername(username); System.out.println("customer " +
+	 * customer); if(customer != null){ System.out.println("inside if"); return new
+	 * CustomerDetails(customer); }else { System.out.println("inside else"); throw
+	 * new UsernameNotFoundException("Invalid email or password"); }
+	 * 
+	 * }
+	 */
 
 	
 	
